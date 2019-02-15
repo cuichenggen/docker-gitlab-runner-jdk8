@@ -30,6 +30,6 @@ RUN apt-get install -y \
     apt-get clean && \
     apt-get autoremove -y
     
-VOLUME ["/etc/gitlab-runner", "/etc/gitlab-runner"]
+VOLUME ["/etc/gitlab-runner/jdk8", "/etc/gitlab-runner"]
 ENTRYPOINT ["/usr/bin/dumb-init", "gitlab-runner"]
 CMD ["run", "--user=root", "--working-directory=/home/gitlab-runner"]
